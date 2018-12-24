@@ -61,6 +61,9 @@ namespace WordpressAutomation
 
             Driver.Instance.FindElement(By.Id("post-title-0")).SendKeys(title);
             Driver.Instance.FindElement(By.Id("mce_0")).SendKeys(body);
+
+            Driver.Wait(TimeSpan.FromSeconds(1));
+
             Driver.Instance.FindElement(By.LinkText("Publish")).Click();
         }
 
