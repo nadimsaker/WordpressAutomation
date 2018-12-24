@@ -10,6 +10,13 @@ namespace WordpressAutomation
 {
     public class NewPostPage
     {
+        public static string Title {
+            get
+            {
+                return String.Empty;
+            }
+        }
+
         public static void GoTo()
         {
             var newPostButton = Driver.Instance.FindElement(By.CssSelector("#header > div.masterbar__publish > a > span"));
@@ -28,7 +35,7 @@ namespace WordpressAutomation
 
         public static bool IsInEditMode()
         {
-
+            return true;
         }
     }
 

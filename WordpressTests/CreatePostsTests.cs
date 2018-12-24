@@ -1,22 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WordpressAutomation;
 
 namespace WordpressTests
 {
     [TestClass]
-    public class CreatePostsTests
+    public class CreatePostsTests:WordpressTest
     {
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-        }
-
         [TestMethod]
         public void Can_Create_A_Basic_Post()
         {
@@ -30,12 +19,6 @@ namespace WordpressTests
             NewPostPage.GoToNewPost();
 
             Assert.AreEqual(PostPage.Title, "This is a test post title.", "Title did not match.");
-        }
-
-        [TestCleanup]
-        public void Cleanup()
-        {
-            Driver.Close();
         }
     }
 }
