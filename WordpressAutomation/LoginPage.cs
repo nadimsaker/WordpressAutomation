@@ -2,11 +2,7 @@
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace WordpressAutomation
 {
@@ -14,7 +10,7 @@ namespace WordpressAutomation
     {
         public static void GoTo()
         {
-            Driver.Instance.Navigate().GoToUrl("https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F");
+            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress + "log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F");
 
             var wait = new WebDriverWait(Driver.Instance,TimeSpan.FromSeconds(10));
             wait.Until(d => d.SwitchTo().ActiveElement().GetAttribute("id") == "usernameOrEmail");

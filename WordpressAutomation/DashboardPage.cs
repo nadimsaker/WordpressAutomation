@@ -8,6 +8,7 @@ namespace WordpressAutomation
         {
             get
             {
+                //Can we create a generalized IsAt for all pages?
                 if(Driver.Instance.FindElement(By.CssSelector("#header > a:nth-child(1) > span")).Text=="My Site")
                 {
                     return true;
