@@ -16,9 +16,7 @@ namespace WordpressAutomation
 
         public static void GoTo()
         {
-            //Should we make a general menu navigation?
-            var newPostButton = Driver.Instance.FindElement(By.CssSelector("#header > div.masterbar__publish > a > span"));
-            newPostButton.Click();
+            LeftNavigation.Posts.AddNew.Select();
         }
 
         public static CreatePostCommand CreatePost(string title)

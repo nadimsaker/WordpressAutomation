@@ -9,7 +9,7 @@ namespace WordpressAutomation
             switch (postType)
             {
                 case PostType.Page:
-                    Driver.Instance.FindElement(By.Id(""));
+                    LeftNavigation.Pages.AllPages.Select();
                     break;
             }
         }
